@@ -1,0 +1,78 @@
+//Realizar un programa para un restaurante que presenta el siguiente menu:
+//1. Pizza Mediana 200
+//2. Lasagna 90
+//3 Alitas 150
+//4 salir
+//El programa debe funcionar para n cantidad de clientes. Al final mostrara cuantos clientes fueron atendidos.
+//Realizar el analisis, seudocodigo, diagrama de flujo y codigo.
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+int contatotal=0, opcion=0, acumulado=0, totalcompra=0, contaclientes1=0, contaclientes2=0, contaclientes3=0, contaclientes4=0;
+int totalcompra1=0, totalcompra2=0, totalcompra3=0, acumulado1=0, acumulado2=0, acumulado3=0, acumulaTotal=0;
+int preciopizza=200, preciolasagna=90, precioalitas=150; 
+
+
+while (contatotal<4)
+{
+	cout<<"*****Menu*******"<<endl;
+		cout<<"1. Pizza Mediana"<<endl;
+		cout<<"2. Lasagna"<<endl;
+		cout<<"3. Alitas"<<endl;
+		cout<<"4. salir"<<endl;
+		cout<<"Ingrese una opcion entre 1-4"<<endl;
+		cin>>opcion;
+	
+	switch(opcion)
+	{
+	
+			case 1:
+			cout<<"Usted ha seleccionado una Pizza Mediana con un costo de "<<preciopizza<<" lps"<<endl;
+			totalcompra1=preciopizza;
+			contaclientes1++;
+			acumulado1=acumulado1+totalcompra1;
+		break;
+		
+			case 2:
+			cout<<"Usted ha seleccionado una Lasagna con un costo de "<<preciolasagna<<" lps"<<endl;
+			totalcompra2=preciolasagna;
+			contaclientes2++;
+			acumulado2=acumulado2+totalcompra2;
+		break;
+		
+			case 3:
+			cout<<"Usted ha seleccionado Alitas con un costo de "<<precioalitas<<" lps"<<endl;
+			totalcompra3=precioalitas;
+			contaclientes3++;
+			acumulado3=acumulado3+totalcompra3;
+		break;
+	
+			case 4:
+			{
+				return 0;
+			}
+		break;
+			
+}
+	
+	
+contatotal++;
+		
+	}
+	
+
+	//Reportes
+	cout<<"Se entregaron "<<contaclientes1<<" de Pizza Mediana " <<acumulado1<<" Lps"<<endl;
+	cout<<"Se entregaron "<<contaclientes2<<" de Lasagna " <<acumulado2<< "Lps"<<endl;
+	cout<<"Se entregaron "<<contaclientes3<<" de Alitas " <<acumulado3<< "Lps" <<endl;
+	
+	 
+	 acumulaTotal=acumulado1+acumulado2+acumulado3; 
+	 cout<<"Se atendieron "<<contatotal<<" personas y se obtuvo un total de "<<acumulaTotal<<" Lps"<<endl;
+	
+
+	return 0;
+}
